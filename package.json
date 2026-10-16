@@ -1,0 +1,26 @@
+{
+  "name": "proyecto_refugio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec node app/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "mon": "^0.0.8",
+    "node": "^26.11.1"
+  }
+}
