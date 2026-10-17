@@ -2,7 +2,7 @@ import JsonWebToken from "jsonwebtoken";
 import dotenv from "dotenv"; 
 
 //importar ususarios por mientras que "no hay bd"
-import {usuarios} from "./../controllers/authenticaion.controller.js"; 
+import {usuarios} from "../app/controllers/authentication.controller.js"; 
 //para poder usarlo 
 dotenv.config(); 
 
