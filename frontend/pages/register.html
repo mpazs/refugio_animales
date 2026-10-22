@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <script src="register.js" defer></script>
 </head>
 <body>
@@ -12,6 +12,13 @@
         <div class="form-container">
             <h1>Crear cuenta</h1>
             <form id="register-form">
+                <label for= "role" class="sr-only">Rol de usuario</label>
+                <select name="role" id="role"required>
+                    <option value="" disabled selected>Selecciona un rol</option>
+                    <option value="Administrador" >Administrador</option>
+                    <option value="Veterinario" >Veterinario</option>
+                    <option value="Voluntario" >Voluntario</option>
+                </select>
                 <label for="username" class="sr-only">User</label>
                 <input type="text" name="user" id="user" placeholder="Nombre de usuario" required>
                 <label for="email" class="sr-only">Email</label>

@@ -9,18 +9,20 @@ import {methods as authorization } from "../middlewares/authorization.js";
 import "./config/basedato.js"; 
 //server
 const app = express();
-app.set ("port",4000);
+app.set ("port",1558);
 app.listen(app.get("port"));
 console.log("servidor corriendo en puerto", app.get("port"))
 
 //configuracion 
-app.use(express.static( __dirname + "/../../.."+"/frontend/public"));
+app.use(express.static( path.join(__dirname, "/../../frontend/public")));
 app.use(express.json());
 app.use(cookieParser());
 
 //rutas
-app.get("/", authorization.soloPublico,(req, res) => res.sendFile(__dirname + "../../../frontend/pages/login.html"))
-app.get("/register", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "../../../frontend/pages/register.html"))
-app.get("/admin", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "../../../frontend/pages/admin/admin.html"))
+app.get("/", authorization.soloPublico,(req, res) => res.sendFile(path.join(__dirname, "../../frontend/pages/login.html")));
+app.get("/register", authorization.soloPublico, (req, res) => res.sendFile(path.join(__dirname, "../../frontend/pages/register.html")));
+app.get("/admin", authorization.soloAdmin, (req, res) => res.sendFile(path.join(__dirname, "../../frontend/pages/admin/admin.html")));
+app.get("/veterinario", authorization.soloAdmin, (req, res) => res.sendFile(path.join(__dirname, "../../frontend/pages/veterinario.html")));
+app.get("/voluntario", authorization.soloAdmin, (req, res) => res.sendFile(path.join(__dirname, "../../frontend/pages/voluntario.html")));
 app.post("/api/register", authentication.register);
 app.post("/api/login", authentication.login);

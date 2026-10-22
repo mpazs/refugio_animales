@@ -18,6 +18,17 @@ body{
     padding: 20px;
 }
 
+.form-container select {
+    width: 100%;
+    padding: 12xp;
+    margin-bottom: 15px;
+    border: 1px;
+    border-radius: 4px;
+    background-color: #aeefd8;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
 form{
     display: flex;
     flex-direction: column;

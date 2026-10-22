@@ -32,8 +32,8 @@ async function login(req,res){
     }
     const token = JsonWebToken.sign(
         {user:usuarioARevisar.user},
-        process.env.JVT_SECRET, 
-        {expiresIn:process.env.JVT_EXPIRATION} )
+        process.env.JWT_SECRET, 
+        {expiresIn:process.env.JWT_EXPIRATION} )
 
         const cookieOption ={
             expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000 ) ,
